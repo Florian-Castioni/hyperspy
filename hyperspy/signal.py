@@ -3052,7 +3052,7 @@ class BaseSignal(FancySlicing,
         else:
             s.data = data
         s.get_dimensions_from_data()
-        for i, factor in enumerate(factors):
+        for i, factor in enumerate(scale):
             s.axes_manager[i].offset += ((factor - 1)
                                          * s.axes_manager[i].scale) / 2
         for axis, axis_src in zip(s.axes_manager._axes,
